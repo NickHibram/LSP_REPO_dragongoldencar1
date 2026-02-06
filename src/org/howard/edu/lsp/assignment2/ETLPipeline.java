@@ -24,23 +24,20 @@ public class ETLPipeline {
         String csvPriceRange;
 
 
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("test.csv"));
+
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("products.csv"));
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("transformed_products.csv"))
             ){
             
-            String file_line;
-            if((file_line = bufferedReader.readLine()) == null){
-                bufferedWriter.write("ProductID,Name,Price,Category,PriceRange");
-            }
+
+            String file_line = bufferedReader.readLine();
+            bufferedWriter.write("ProductID,Name,Price,Category,PriceRange");
+            bufferedWriter.newLine();
+
             while ((file_line = bufferedReader.readLine()) != null){
                 // Everything Above is just to get the file read properly 
                 //I am going to put the respective cols in an array
-                if(count ==0){
-                    bufferedWriter.write("ProductID,Name,Price,Category,PriceRange");
-                    bufferedWriter.newLine();
-                    count++;
-                    continue;
-                }
+
                 String[] fieldFromCSVStrings = file_line.split(",");
                 /*
                 DATA CLEANING 
