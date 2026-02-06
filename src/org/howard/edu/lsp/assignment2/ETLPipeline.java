@@ -16,17 +16,17 @@ public class ETLPipeline {
  */
 
     public static void main(String[] args) {
-        int count =0;
         int csvProductID;
         double csvPrice;
         String csvName;
         String csvCategory;
         String csvPriceRange;
+        int lineRead=0,lineSkipped=0;
 
 
 
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("products.csv"));
-            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("transformed_products.csv"))
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader("data/products.csv"));
+            BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("data/transformed_products.csv"))
             ){
             
 
@@ -44,6 +44,8 @@ public class ETLPipeline {
                     */
                 // Ensuring there arent too many fields 
                 if(fieldFromCSVStrings.length!=4){
+                    lineRead++;
+                    lineSkipped++;
                     continue;
                 }
 
@@ -56,12 +58,16 @@ public class ETLPipeline {
                     csvProductID = Integer.parseInt(fieldFromCSVStrings[0].trim());
                 }
                 catch (NumberFormatException e){
+                    lineRead++;
+                    lineSkipped++;
                     continue;
                 }
                 try{
                     csvPrice = Double.parseDouble(fieldFromCSVStrings[2].trim());
                 }
                 catch (NumberFormatException e){
+                    lineRead++;
+                    lineSkipped++;
                     continue;
                 }
 
@@ -103,9 +109,9 @@ public class ETLPipeline {
                 bufferedWriter.newLine();
                 // System.out.println(Arrays.toString(fieldFromCSVStrings));
                 // System.out.println(csvProductID+" "+csvName+ " "+ csvPrice+" "+csvCategory+ " "+csvPriceRange);
-                count++;
+                lineRead++;
             }
-            System.out.println("Data Successfully Extracted");
+            System.out.println("Data Successfully Extracted\n\tSummary is as follows\nTotal lines read: "+lineRead+"\nTotal lines skipped: "+lineSkipped+"\nTotal lines transformed: "+(lineRead-lineSkipped)+"\nOutput File Path: data/transformed_products.csv");
         }catch (IOException e ){
             System.out.println("Error Reading/Writing File"+ e.getMessage());
         }
