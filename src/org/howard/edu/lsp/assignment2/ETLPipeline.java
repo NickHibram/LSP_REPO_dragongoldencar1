@@ -42,7 +42,7 @@ public class ETLPipeline {
                 /*
                 DATA CLEANING 
                     */
-                // Ensuring there arent too many fields 
+                // Ensuring there aren't too many fields 
                 if(fieldFromCSVStrings.length!=4){
                     lineRead++;
                     lineSkipped++;
@@ -81,10 +81,10 @@ public class ETLPipeline {
                 //If "Electronics", 10% discount to the price.
                 if(csvCategory.equals("Electronics")){
                     //System.out.println("Old Price: " + csvPrice);
-                    csvPrice = csvPrice *0.90; 
-                    csvPrice = Math.round(csvPrice * 100.0) / 100.0;
-                    //System.out.println("New Price" + csvPrice);
-                }
+                    csvPrice = csvPrice *0.90; }
+               
+                //Rounding Everything
+                csvPrice = Math.round(csvPrice * 100.0) / 100.0;
                    
                 // if Discount Electronics Price is <500 make it Premium Electronics
                 if(csvCategory.equals("Electronics")&& csvPrice>500){
