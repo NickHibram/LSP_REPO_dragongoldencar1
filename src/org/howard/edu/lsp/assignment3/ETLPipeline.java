@@ -23,7 +23,12 @@ public class ETLPipeline {
     public static void main(String[] args) {
         // ======== EXTRACT ========
         ProductExtractor extractor = new ProductExtractor();
-        extractor.store("data/products.csv");
+        try {
+    extractor.store("data/products.csv");
+            } catch (RuntimeException e) {
+    System.out.println(e.getMessage() + " Exiting.");
+    return;
+        }
         // Get valid extracted products
         List<Product> validProducts = extractor.getValidProducts();
         // ======== TRANSFORM ========
