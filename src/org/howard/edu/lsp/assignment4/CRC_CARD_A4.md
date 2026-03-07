@@ -53,7 +53,8 @@ Collaborators (if any):
 
 Responsibilities:
 - Receives data from ATCSystem and DangerDetector
-- Stores aircraft data and allows access in a safe and encapsulated manner
+- Stores aircraft data
+- Allows access to data in a safe and encapsulated manner
   
 Collaborators (if any):
 - ATCSystem
