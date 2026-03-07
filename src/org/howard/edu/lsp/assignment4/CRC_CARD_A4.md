@@ -3,18 +3,23 @@
 Responsibilities:
 - Stores specific aircraft data such as id, status, flight_number, location, etc. 
 
-Collaborators (if any):
+Collaborators:
 - Transponder
 
+Assumptions:
+- None
 
 ******Class**:** Transponder**
 
 Responsibilities:
 - Broadcasts aircraft data from Aircraft to the ATCSystem
   
-Collaborators (if any):
+Collaborators:
 - ATCSystem
-- Aircraft 
+- Aircraft
+
+Assumptions:
+- None
 
 **Class: ATCSystem**
 
@@ -23,10 +28,12 @@ Responsibilities:
 -  Unpacks Transponder data
 -  Sends data to the AircraftDatabase
 
-Collaborators (if any):
+Collaborators:
 - Transponder
 - AircraftDatabase
 
+Assumptions:
+- None
 
 **Class: GraphicSystem**
 
@@ -34,20 +41,23 @@ Responsibilities:
 - Accesses  AircraftDatabase and displays the data on the graphic display
 - Refreshes and repeats the process every 10 seconds
   
-Collaborators (if any):
+Collaborators:
 - AircraftDatabase
 
-
+Assumptions:
+- None
 
 **Class: Controller**
 
 Responsibilities:
 - Queries AircraftDatabase for details on aircraft on the graphic display
 
-Collaborators (if any):
+Collaborators:
 - GraphicSystem
 - AircraftDatabase
 
+Assumptions:
+- None
 
 **Class: AircraftDatabase**
 
@@ -56,13 +66,14 @@ Responsibilities:
 - Stores aircraft data
 - Allows access to data in a safe and encapsulated manner
   
-Collaborators (if any):
+Collaborators:
 - ATCSystem
 - Controller
 - GraphicSystem
 - DangerDetector
 
-
+Assumptions:
+- None
 
 **Class: DangerDetector**
 
@@ -70,8 +81,9 @@ Responsibilities:
 - Detects possible danger utilizing various aircraft’s data  
 - Sends danger warnings to AircraftDatabase
 
-Collaborators (if any):
+Collaborators:
 - AircraftDatabase
 
-
+Assumptions:
+- None
 
