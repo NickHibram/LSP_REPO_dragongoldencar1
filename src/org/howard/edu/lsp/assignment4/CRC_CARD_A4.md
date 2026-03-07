@@ -59,13 +59,14 @@ Collaborators (if any):
 - ATCSystem
 - Controller
 - GraphicSystem
+- DangerDetector
 
 
 
 **Class: DangerDetector**
 
 Responsibilities:
-- Utilizing various aircraft’s data detects possible danger
+- Detects possible danger utilizing various aircraft’s data  
 - Sends danger warnings to AircraftDatabase
 
 Collaborators (if any):
