@@ -1,51 +1,60 @@
-CRC Card
-Class: Aircraft
+**Class: Aircraft**
+
 Responsibilities:
 - Stores specific aircraft data such as id, status, flight_number, location, etc. 
+
 Collaborators (if any):
 - Transponder
 
-CRC Card
-Class: Transponder
+
+******Class**:** Transponder**
+
 Responsibilities:
-- Broadcasts aircraft data from Aircraft to the ATCSystem 
+- Broadcasts aircraft data from Aircraft to the ATCSystem
+  
 Collaborators (if any):
 - ATCSystem
 - Aircraft 
-CRC Card
-Class: ATCSystem
+
+**Class: ATCSystem**
+
 Responsibilities:
 - Receives data from Transponder
 -  Unpacks Transponder data
--Sends data to the AircraftDatabase
+-  Sends data to the AircraftDatabase
+
 Collaborators (if any):
 - Transponder
 - AircraftDatabase
 
-CRC Card
-Class: GraphicSystem
+
+**Class: GraphicSystem**
+
 Responsibilities:
 - Accesses  AircraftDatabase and displays the data on the graphic display
 - Refreshes and repeats the process every 10 seconds
+  
 Collaborators (if any):
 - AircraftDatabase
 
 
 
-CRC Card
-Class: Controller
+**Class: Controller**
+
 Responsibilities:
 - Queries AircraftDatabase for details on aircraft on the graphic display
-
 
 Collaborators (if any):
 - GraphicSystem
 - AircraftDatabase
-CRC Card
-Class: AircraftDatabase
+
+
+**Class: AircraftDatabase**
+
 Responsibilities:
 - Receives data from ATCSystem and DangerDetector
-- Stores aircraft data and allows access in a safe and encapsulated manner 
+- Stores aircraft data and allows access in a safe and encapsulated manner
+  
 Collaborators (if any):
 - ATCSystem
 - Controller
@@ -53,11 +62,12 @@ Collaborators (if any):
 
 
 
-CRC Card
-Class: DangerDetector
+**Class: DangerDetector**
+
 Responsibilities:
 - Utilizing various aircraft’s data detects possible danger
 - Sends danger warnings to AircraftDatabase
+
 Collaborators (if any):
 - AircraftDatabase
 
