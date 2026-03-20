@@ -1,3 +1,5 @@
+This is a ChatGPT Log
+
 This is question 2:
 Question 2 - Evaluating Object-Oriented Design (30 points)
 The following class is part of a simple order processing system. The design of this class violates several object-oriented design ideas discussed in class, including principles described in Arthur Riel’s object-oriented design heuristics. Study the code carefully and answer the questions that follow.
