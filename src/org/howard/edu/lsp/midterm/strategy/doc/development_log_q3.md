@@ -1,4 +1,5 @@
 This is a ChatGPT Log
+
 Lets move on to question 3:
 Question 3 - Refactoring to Use a Design Pattern (30 points)
 The following class calculates final prices for customer purchases. Although the code works, the design makes the system difficult to extend and maintain. Study the code carefully and answer the questions that follow.
