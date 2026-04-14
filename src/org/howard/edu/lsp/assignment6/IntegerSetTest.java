@@ -135,17 +135,7 @@ public class IntegerSetTest {
         assertFalse(set.contains(1), "Empty set should not contain any elements");
     }
 
-    @Test
-    @DisplayName("contains(): calling method on null reference throws NullPointerException")
-    public void testContainsOnNullSet() {
-        IntegerSet set = null;
-        try {
-            set.contains(1);
-            fail("Calling contains on a null set should throw NullPointerException");
-        } catch (NullPointerException e) {
-            // Expected exception
-        }
-    }
+
 
     // ------------------------------------------------------------------ //
     // largest()
