@@ -3,8 +3,8 @@ VSCode AI, ChatGPT
 
 Prompts Used (2–5 max):
 1. Not really a prompt, but when I started writing the code, VSCode autocompleted parts of it.
-2. Check my test file based off of this question and be strict: Question 3 (20 points): write JUnit 5 test cases for the given GradeCalculator class based on these requirements...
-3. Help me fix why my tests are not running in VSCode.
+2. "Check my test files based off of this question and be strict: Question 3 (20 points): write JUnit 5 test cases for the given GradeCalculator class based on these requirements..."
+3. "Help me fix why my tests are not running in VSCode."
 
 How AI Helped:
 I first used VSCode AI autocomplete to generate most of the test cases, then used ChatGPT to review and improve them. It helped me catch issues with my boundary tests and confirm that I met all the requirements. It also helped me debug why my tests were not running.

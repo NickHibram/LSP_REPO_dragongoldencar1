@@ -2,9 +2,10 @@ AI Tools Used:
 ChatGPT
 
 Prompts Used (2–5 max):
-1. A prompt of me sending the question over
-2. "I made some structural changes what are you thoughts on these comparatively. remember be strict
+1. A prompt of me sending the question over......
+2. "I made some structual changes what are you thoughts on these compartivily. remeber be strict
 "
+3. "Output it to me again"
 
 How AI Helped:
 AI helped me create the initial structure and code for the Template Method implementation, including the abstract Report class and concrete StudentReport and CourseReport classes. I provided suggestions and revisions during the process, especially around formatting, structure, and making sure the final version matched the assignment requirements.

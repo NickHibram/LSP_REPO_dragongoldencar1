@@ -5,8 +5,6 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.howard.edu.lsp.midterm.GradeCalculator;
-
 /**
  * JUnit 5 test class for {@link GradeCalculator}.
  *
